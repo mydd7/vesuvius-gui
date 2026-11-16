@@ -1,0 +1,14 @@
+{
+  "source_commit": "9bfc896e7eda42ff643d884dfdd648ef04233af6",
+  "platform": "Windows GNU, GCC 16.1.0",
+  "target": "x86_64-pc-windows-gnu",
+  "passed": 150,
+  "ignored": 3,
+  "all_exit_codes_zero": true,
+  "limitations": [
+    "GUI argument tests were not built for GNU",
+    "External author-specific Zarr dataset was not available",
+    "Four tifxyz tests are excluded here; they have a separate real-fixture run",
+    "Linux and macOS were not run"
+  ]
+}

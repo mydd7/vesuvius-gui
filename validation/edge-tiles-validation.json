@@ -1,0 +1,377 @@
+{
+  "sample": "PHerc0800",
+  "crop": "400+400-65x67",
+  "layer": 32,
+  "image_shape": [
+    67,
+    65
+  ],
+  "before_source_commit": "b200035e181af514818c4c756c050a9c0d00c5c5",
+  "fix_commit": "03703203d04752d538b782fe0d553e3883295b43",
+  "cold_chunk_transfers": [
+    {
+      "format": "png",
+      "tile_size": 1024,
+      "before_requests": 29,
+      "after_requests": 2,
+      "before_bytes": 60817408,
+      "after_bytes": 4194304
+    },
+    {
+      "format": "png",
+      "tile_size": 128,
+      "before_requests": 7,
+      "after_requests": 2,
+      "before_bytes": 14680064,
+      "after_bytes": 4194304
+    },
+    {
+      "format": "png",
+      "tile_size": 16,
+      "before_requests": 3,
+      "after_requests": 2,
+      "before_bytes": 6291456,
+      "after_bytes": 4194304
+    },
+    {
+      "format": "tif",
+      "tile_size": 1024,
+      "before_requests": 29,
+      "after_requests": 2,
+      "before_bytes": 60817408,
+      "after_bytes": 4194304
+    }
+  ],
+  "before_runs": [
+    {
+      "tile_size": 1024,
+      "format": "png",
+      "cache": "cold",
+      "run": 0,
+      "elapsed_seconds": 3.9817003999996814,
+      "cpu_seconds": 2.75,
+      "chunk_download_requests": 29,
+      "chunk_download_bytes": 60817408,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 1024,
+      "format": "png",
+      "cache": "warm",
+      "run": 1,
+      "elapsed_seconds": 1.2533049000012397,
+      "cpu_seconds": 0.859375,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 1024,
+      "format": "png",
+      "cache": "warm",
+      "run": 2,
+      "elapsed_seconds": 1.2195355000003474,
+      "cpu_seconds": 0.859375,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 128,
+      "format": "png",
+      "cache": "cold",
+      "run": 0,
+      "elapsed_seconds": 2.182871700002579,
+      "cpu_seconds": 1.3125,
+      "chunk_download_requests": 7,
+      "chunk_download_bytes": 14680064,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 128,
+      "format": "png",
+      "cache": "warm",
+      "run": 1,
+      "elapsed_seconds": 1.089741600000707,
+      "cpu_seconds": 0.765625,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 128,
+      "format": "png",
+      "cache": "warm",
+      "run": 2,
+      "elapsed_seconds": 1.0709860999995726,
+      "cpu_seconds": 0.6875,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 16,
+      "format": "png",
+      "cache": "cold",
+      "run": 0,
+      "elapsed_seconds": 2.716411599998537,
+      "cpu_seconds": 0.953125,
+      "chunk_download_requests": 3,
+      "chunk_download_bytes": 6291456,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 16,
+      "format": "png",
+      "cache": "warm",
+      "run": 1,
+      "elapsed_seconds": 1.0766452999996545,
+      "cpu_seconds": 0.71875,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 16,
+      "format": "png",
+      "cache": "warm",
+      "run": 2,
+      "elapsed_seconds": 1.1161791000013181,
+      "cpu_seconds": 0.765625,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 1024,
+      "format": "tif",
+      "cache": "cold",
+      "run": 0,
+      "elapsed_seconds": 3.2353472000031616,
+      "cpu_seconds": 2.859375,
+      "chunk_download_requests": 29,
+      "chunk_download_bytes": 60817408,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 1024,
+      "format": "tif",
+      "cache": "warm",
+      "run": 1,
+      "elapsed_seconds": 1.3443298999991384,
+      "cpu_seconds": 0.984375,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 1024,
+      "format": "tif",
+      "cache": "warm",
+      "run": 2,
+      "elapsed_seconds": 1.3405282000021543,
+      "cpu_seconds": 1.0,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    }
+  ],
+  "after_runs": [
+    {
+      "tile_size": 1024,
+      "format": "png",
+      "cache": "cold",
+      "run": 0,
+      "elapsed_seconds": 2.7499723000000813,
+      "cpu_seconds": 0.921875,
+      "chunk_download_requests": 2,
+      "chunk_download_bytes": 4194304,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 1024,
+      "format": "png",
+      "cache": "warm",
+      "run": 1,
+      "elapsed_seconds": 1.0972753000023658,
+      "cpu_seconds": 0.78125,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 1024,
+      "format": "png",
+      "cache": "warm",
+      "run": 2,
+      "elapsed_seconds": 1.0644537999978638,
+      "cpu_seconds": 0.71875,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 128,
+      "format": "png",
+      "cache": "cold",
+      "run": 0,
+      "elapsed_seconds": 2.036935899999662,
+      "cpu_seconds": 0.859375,
+      "chunk_download_requests": 2,
+      "chunk_download_bytes": 4194304,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 128,
+      "format": "png",
+      "cache": "warm",
+      "run": 1,
+      "elapsed_seconds": 1.0446364999988873,
+      "cpu_seconds": 0.703125,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 128,
+      "format": "png",
+      "cache": "warm",
+      "run": 2,
+      "elapsed_seconds": 1.027763899997808,
+      "cpu_seconds": 0.71875,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 16,
+      "format": "png",
+      "cache": "cold",
+      "run": 0,
+      "elapsed_seconds": 2.374325000000681,
+      "cpu_seconds": 0.9375,
+      "chunk_download_requests": 2,
+      "chunk_download_bytes": 4194304,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 16,
+      "format": "png",
+      "cache": "warm",
+      "run": 1,
+      "elapsed_seconds": 1.0250506999982463,
+      "cpu_seconds": 0.703125,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 16,
+      "format": "png",
+      "cache": "warm",
+      "run": 2,
+      "elapsed_seconds": 1.0162335999993957,
+      "cpu_seconds": 0.734375,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 1024,
+      "format": "tif",
+      "cache": "cold",
+      "run": 0,
+      "elapsed_seconds": 2.025770600001124,
+      "cpu_seconds": 0.890625,
+      "chunk_download_requests": 2,
+      "chunk_download_bytes": 4194304,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 1024,
+      "format": "tif",
+      "cache": "warm",
+      "run": 1,
+      "elapsed_seconds": 1.05945729999803,
+      "cpu_seconds": 0.71875,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "tile_size": 1024,
+      "format": "tif",
+      "cache": "warm",
+      "run": 2,
+      "elapsed_seconds": 1.0467178999970201,
+      "cpu_seconds": 0.71875,
+      "chunk_download_requests": 0,
+      "chunk_download_bytes": 0,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    }
+  ],
+  "obj_cases_unchanged": [
+    {
+      "shape": [
+        67,
+        65
+      ],
+      "tile_size": 1024,
+      "pixel_sha256": "0a4cdf645db1190ec55cd8a55f64c481dc4423c39b64893409ab673b3582b064"
+    },
+    {
+      "shape": [
+        67,
+        65
+      ],
+      "tile_size": 16,
+      "pixel_sha256": "0a4cdf645db1190ec55cd8a55f64c481dc4423c39b64893409ab673b3582b064"
+    },
+    {
+      "shape": [
+        63,
+        61
+      ],
+      "tile_size": 1024,
+      "pixel_sha256": "23591cc9f27ba94ae08c44637ce6f0e9e0df221b6907f24cf5910d763561fb70"
+    },
+    {
+      "shape": [
+        63,
+        61
+      ],
+      "tile_size": 16,
+      "pixel_sha256": "23591cc9f27ba94ae08c44637ce6f0e9e0df221b6907f24cf5910d763561fb70"
+    },
+    {
+      "shape": [
+        1,
+        1
+      ],
+      "tile_size": 1024,
+      "pixel_sha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+    },
+    {
+      "shape": [
+        1,
+        1
+      ],
+      "tile_size": 16,
+      "pixel_sha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+    }
+  ],
+  "obj_source_sha256": "74c390b60c01f5d368bbdb68072038b3895f992649aed7592bf78042dd0734e8",
+  "tiff_padding_nonzero_pixels": {
+    "before": 188845,
+    "after": 0
+  },
+  "before_binary_sha256": "5815fa47c8eb63f760c50a485836485f56575498954cfe3d1c6f008908e434f3",
+  "after_binary_sha256": "18386f7373deacb9c83e15138d96234b730f3e3ada9a9dd60ec95f541d84039e",
+  "limitations": [
+    "One real surface and crop; download savings depend on geometry and crop",
+    "Request counts and bytes cover CT chunk responses, excluding metadata and protocol overhead",
+    "Windows MSVC debug builds with the separate reader/build/cache fixes",
+    "CPU and elapsed times are observations, not a general rendering-throughput claim",
+    "Overlay chunk footprints tested; overlay image equality not executed"
+  ]
+}

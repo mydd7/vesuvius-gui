@@ -1,0 +1,204 @@
+{
+  "branch": "fix/cache-zarr-fortran-order",
+  "source": {
+    "volume": "PHerc0800/20250521135224-8.640um-1.2m-116keV-masked.zarr",
+    "native_chunk": "91/47/25",
+    "native_chunk_sha256": "6784a75ce2a9df9b28831a755e1c0524a252b1b93dabae5af4d0bb9d578f563f",
+    "roi_origin_xyz": [
+      3264,
+      6031,
+      11712
+    ],
+    "roi_shape_zyx": [
+      64,
+      64,
+      64
+    ],
+    "roi_sha256": "2949bae623b925e0977397bc58ef0148bfc0a2d2b1cc5b11ecc4e458955b824b",
+    "surface": "20251029010146-auto_grown_20251029010146642",
+    "crop": "242+802-16x16",
+    "mesh_cell_rc": [
+      40,
+      12
+    ],
+    "local_mesh_cell_bounds_xyz": [
+      [
+        38.596435546875,
+        22.84423828125,
+        25.33203125
+      ],
+      [
+        45.889892578125,
+        42.52197265625,
+        45.7861328125
+      ]
+    ],
+    "transform": "Subtract the integer ROI origin from both the volume frame and mesh; CT bytes and relative geometry unchanged",
+    "volume_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr"
+  },
+  "regression_tests": {
+    "before_passed": 1,
+    "before_failed": 2,
+    "after_passed": 3
+  },
+  "extract_fixture": {
+    "shape_zyx": [
+      3,
+      16,
+      12
+    ],
+    "chunks_zyx": [
+      4,
+      8,
+      6
+    ],
+    "ct_voxels_per_case": 576,
+    "padded_voxels_per_case": 261568,
+    "cases": [
+      "local C",
+      "local F",
+      "download-payload F"
+    ]
+  },
+  "renders": [
+    {
+      "phase": "before",
+      "order": "C",
+      "exit_code": 0,
+      "shape": [
+        16,
+        16
+      ],
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+      "nonzero_pixels": 256
+    },
+    {
+      "phase": "before",
+      "order": "F",
+      "exit_code": 0,
+      "shape": [
+        16,
+        16
+      ],
+      "pixel_sha256": "fd01d1f4ff8d5c0337aa1646083aa9b004bbde7f0ac76d1aa2d2d6c1492edfbe",
+      "nonzero_pixels": 256
+    },
+    {
+      "phase": "after",
+      "order": "C",
+      "exit_code": 0,
+      "shape": [
+        16,
+        16
+      ],
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+      "nonzero_pixels": 256
+    },
+    {
+      "phase": "after",
+      "order": "F",
+      "exit_code": 0,
+      "shape": [
+        16,
+        16
+      ],
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+      "nonzero_pixels": 256
+    }
+  ],
+  "before_fortran_vs_c": {
+    "different_pixels": 247,
+    "max_absolute_difference": 62
+  },
+  "after_fortran_equals_c": true,
+  "limitations": [
+    "Windows MSVC debug build only",
+    "No GPU run",
+    "Previously persisted incorrect cache chunks are not migrated",
+    "Live downloads tested against a loopback HTTP server serving the real CT fixture; no new S3 throughput measurement"
+  ],
+  "irregular_native_chunks": {
+    "shape_zyx": [
+      96,
+      96,
+      96
+    ],
+    "chunks_zyx": [
+      48,
+      40,
+      56
+    ],
+    "roi_origin_xyz": [
+      3232,
+      6031,
+      11680
+    ],
+    "roi_sha256": "df193aa33dad88254fdb3d74ff9ea4810e2072769d270630b8fdb6d964449079",
+    "renders": [
+      {
+        "phase": "before",
+        "order": "C",
+        "exit_code": 0,
+        "nonzero_pixels": 256,
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+      },
+      {
+        "phase": "before",
+        "order": "F",
+        "exit_code": 0,
+        "nonzero_pixels": 256,
+        "pixel_sha256": "2a3d3e569c2f07e7a55aef735df36932b91daab1a1329e8f1a19b22721ceb679"
+      },
+      {
+        "phase": "after",
+        "order": "C",
+        "exit_code": 0,
+        "nonzero_pixels": 256,
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+      },
+      {
+        "phase": "after",
+        "order": "F",
+        "exit_code": 0,
+        "nonzero_pixels": 256,
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+      }
+    ],
+    "after_fortran_equals_c": true,
+    "before_fortran_different_pixels": 254
+  },
+  "local_http_pipeline": [
+    {
+      "phase": "before",
+      "order": "C",
+      "exit_code": 0,
+      "nonzero_pixels": 256,
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+      "native_chunk_gets": 4
+    },
+    {
+      "phase": "before",
+      "order": "F",
+      "exit_code": 0,
+      "nonzero_pixels": 256,
+      "pixel_sha256": "2a3d3e569c2f07e7a55aef735df36932b91daab1a1329e8f1a19b22721ceb679",
+      "native_chunk_gets": 4
+    },
+    {
+      "phase": "after",
+      "order": "C",
+      "exit_code": 0,
+      "nonzero_pixels": 256,
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+      "native_chunk_gets": 4
+    },
+    {
+      "phase": "after",
+      "order": "F",
+      "exit_code": 0,
+      "nonzero_pixels": 256,
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+      "native_chunk_gets": 4
+    }
+  ]
+}

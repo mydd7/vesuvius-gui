@@ -1,0 +1,85 @@
+{
+  "branch": "fix/cache-chunk-dependencies",
+  "fixture": {
+    "volume_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr/",
+    "native_chunk": "91/47/25",
+    "native_chunk_sha256": "6784a75ce2a9df9b28831a755e1c0524a252b1b93dabae5af4d0bb9d578f563f",
+    "crop_zyx": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        8
+      ]
+    ],
+    "shape_zyx": [
+      4,
+      8,
+      8
+    ],
+    "sha256": "25fa74db773fb8aea860d7c6010c80e54ad2763f2145fba10e3efc0350253e27",
+    "processing": "Unchanged native uint8 CT values, uncompressed C order"
+  },
+  "regression_tests": {
+    "before_passed": 1,
+    "before_failed": 3,
+    "after_passed": 4
+  },
+  "before": {
+    "async_child_failure": "parent stays Pending",
+    "already_failed_child": "parent becomes persistently Empty",
+    "already_resident_child": "parent stays Pending",
+    "out_of_bounds_children": "correctly zero padded"
+  },
+  "after": {
+    "async_child_failure": "parent reaches a retryable CooldownMiss",
+    "already_failed_child": "parent reaches a retryable CooldownMiss",
+    "already_resident_child": "parent becomes Resident with exact CT averages",
+    "recovery": "both failed cases reproduce exact CT averages after test-controlled cooldown expiry",
+    "out_of_bounds_children": "still correctly zero padded"
+  },
+  "ct_voxels": 256,
+  "averaged_ct_voxels_per_result": 32,
+  "zero_padding_voxels_per_result": 262112,
+  "repetitions": [
+    {
+      "iteration": 1,
+      "passed": 4,
+      "exit_code": 0
+    },
+    {
+      "iteration": 2,
+      "passed": 4,
+      "exit_code": 0
+    },
+    {
+      "iteration": 3,
+      "passed": 4,
+      "exit_code": 0
+    },
+    {
+      "iteration": 4,
+      "passed": 4,
+      "exit_code": 0
+    },
+    {
+      "iteration": 5,
+      "passed": 4,
+      "exit_code": 0
+    }
+  ],
+  "platform": "Windows MSVC",
+  "limitations": [
+    "Read failure injected into the native CT Compute source",
+    "Tests expire cooldown map entries directly rather than waiting ten seconds",
+    "Small cache shards used to isolate dependency behavior from unrelated Windows mapping/allocation problems",
+    "Linux and macOS not run",
+    "Existing incorrect persisted Empty parent entries are not migrated"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "source_commit": "9bfc896e7eda42ff643d884dfdd648ef04233af6",
+  "platform": "Windows MSVC",
+  "existing_overlay_tests_passed": 11,
+  "exit_code": 0,
+  "scope": "Existing tests of alpha composition and overlay ray walks; additional to the main 142 checks"
+}

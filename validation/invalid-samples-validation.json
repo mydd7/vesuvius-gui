@@ -1,0 +1,89 @@
+{
+  "branch": "fix/cache-invalid-samples",
+  "source": {
+    "volume_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr",
+    "surface": "20251029010146-auto_grown_20251029010146642",
+    "native_chunk": "91/47/25",
+    "native_chunk_sha256": "6784a75ce2a9df9b28831a755e1c0524a252b1b93dabae5af4d0bb9d578f563f",
+    "roi_origin_xyz": [
+      3312,
+      6031,
+      11712
+    ],
+    "roi_shape_zyx": [
+      64,
+      64,
+      16
+    ],
+    "roi_sha256": "712ffe92c3992fae6d0cc26b52aee439eb1302716c7c41faee35c9087fbe8061",
+    "negative_case": {
+      "cell_rc": [
+        40,
+        12
+      ],
+      "crop": "242+802-16x16",
+      "bounds": [
+        [
+          -9.403564453125,
+          22.84423828125,
+          25.33203125
+        ],
+        [
+          -2.110107421875,
+          42.52197265625,
+          45.7861328125
+        ]
+      ]
+    },
+    "valid_control": {
+      "source_roi": "original 64-cubed CT ROI",
+      "cell_rc": [
+        40,
+        12
+      ],
+      "crop": "242+802-16x16"
+    }
+  },
+  "regression_tests": {
+    "before_passed": 1,
+    "before_failed": 5,
+    "after_passed": 6
+  },
+  "before": [
+    {
+      "case": "negative",
+      "exit_code": 0,
+      "nonzero_pixels": 256,
+      "pixel_sha256": "4dcf94c6c8f0f9e2dd9aec9291a8bc26aaf202ee5c64586eb35800b5ceec4cbd"
+    },
+    {
+      "case": "valid-control",
+      "exit_code": 0,
+      "nonzero_pixels": 256,
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+    }
+  ],
+  "after": [
+    {
+      "case": "negative",
+      "exit_code": 0,
+      "nonzero_pixels": 0,
+      "pixel_sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1"
+    },
+    {
+      "case": "valid-control",
+      "exit_code": 0,
+      "nonzero_pixels": 256,
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+    }
+  ],
+  "negative_crop_expectation": "All four corners of the real mesh cell have x < -1 in the narrow CT ROI; all sampled points are outside the cropped volume and must be zero",
+  "valid_control": "Same mesh cell inside the original 64-cubed CT ROI; output hash unchanged",
+  "image_processing": "Original 16x16 grayscale render pixels, nearest-neighbor enlargement, labels; no screenshot or generated image",
+  "platform": "Windows MSVC debug build",
+  "limitations": [
+    "Existing positive upper-bound and edge interpolation behavior unchanged",
+    "Linux and macOS not run",
+    "No ink-recognition accuracy or throughput claim"
+  ]
+}

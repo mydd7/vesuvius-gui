@@ -1,0 +1,39 @@
+{
+  "branch": "feat/gui-initial-xyz",
+  "before": {
+    "exit_code": 2,
+    "xyz_option_supported": false
+  },
+  "argument_tests_passed": 3,
+  "requested_coordinates": [
+    24,
+    24,
+    24
+  ],
+  "gui_after": {
+    "exit_code": 0,
+    "forced_termination": false,
+    "panics": 0,
+    "tile_task_errors": 0,
+    "requested_coordinates_logged": true,
+    "source_commit": "f68f686cdd73ca08cf39f364cabc7988a101c208"
+  },
+  "decoded_ct_caches": [
+    {
+      "volume": "C base",
+      "decoded_bytes": 262144,
+      "sha256": "2949bae623b925e0977397bc58ef0148bfc0a2d2b1cc5b11ecc4e458955b824b"
+    },
+    {
+      "volume": "F overlay",
+      "decoded_bytes": 262144,
+      "sha256": "2949bae623b925e0977397bc58ef0148bfc0a2d2b1cc5b11ecc4e458955b824b"
+    }
+  ],
+  "platform": "Windows MSVC debug build",
+  "limitations": [
+    "GUI launch validation includes the separate reader/cache/startup fixes",
+    "The cached CT bytes and initial coordinates are verified; GPU display still needs manual verification because automated OpenGL captures were blank",
+    "Linux and macOS not run"
+  ]
+}

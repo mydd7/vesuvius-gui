@@ -1,0 +1,70 @@
+{
+  "branch": "fix/downloader-range-response",
+  "fixture": {
+    "repository_file": "vesuvius-c3d/tests/fixtures/subchunk_5_3_3__0_0_0.c3dc",
+    "compressed_bytes": 687257,
+    "sha256": "91d2c86ebe72b1b2a61d721eeaeb95b27d7eec98816992eb75b96c86c7c621db",
+    "decoded_bytes": 16777216
+  },
+  "regression_tests": {
+    "before_passed": 2,
+    "before_failed": 5,
+    "after_passed": 7
+  },
+  "cases": {
+    "valid_206": "bytes match the fixture and all decoded voxels match direct decoding",
+    "ignored_range_200": "retryable error before reading the response body",
+    "short_206": "retryable error instead of a successful partial chunk",
+    "wrong_offset_206": "retryable error even with the requested number of CT bytes",
+    "missing_content_range": "retryable error before reading body",
+    "invalid_content_range": "reversed bounds, invalid total, wrong unit and overflowing offsets rejected",
+    "unknown_complete_length": "exact CT bytes accepted with uppercase BYTES and unknown total"
+  },
+  "platform": "Windows MSVC",
+  "limitations": [
+    "Linux and macOS not executed",
+    "Existing incorrectly persisted response bodies are not migrated",
+    "No general throughput measurement"
+  ],
+  "prior_body_checks_repetitions": [
+    {
+      "iteration": 1,
+      "passed": 3,
+      "exit_code": 0
+    },
+    {
+      "iteration": 2,
+      "passed": 3,
+      "exit_code": 0
+    },
+    {
+      "iteration": 3,
+      "passed": 3,
+      "exit_code": 0
+    },
+    {
+      "iteration": 4,
+      "passed": 3,
+      "exit_code": 0
+    },
+    {
+      "iteration": 5,
+      "passed": 3,
+      "exit_code": 0
+    }
+  ],
+  "prior_body_checks_repetitions_note": "Historical checks of the initial three body validation cases, before Content-Range validation was added",
+  "content_range_extension_tests": {
+    "previous_implementation_passed": 4,
+    "previous_implementation_failed": 3,
+    "after_passed": 7
+  },
+  "live_public_header": {
+    "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr/0/91/47/25",
+    "requested_range": "bytes=0-31",
+    "status": 206,
+    "content_range": "bytes 0-31/2097152",
+    "bytes_read": 32
+  },
+  "specification": "https://www.rfc-editor.org/rfc/rfc9110.html#section-14.4"
+}

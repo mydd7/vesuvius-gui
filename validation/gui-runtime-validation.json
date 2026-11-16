@@ -1,0 +1,26 @@
+{
+  "branch": "fix/gui-blocking-runtime",
+  "before": {
+    "exit_code": 101,
+    "error": "Cannot drop a runtime in a context where blocking is not allowed",
+    "operation": "open a local PHerc0800 OME-Zarr CT ROI and tifxyz surface"
+  },
+  "after": {
+    "native_window_observed": true,
+    "frame_processing_observed": true,
+    "base_and_overlay_opened": true,
+    "exit_code": 0,
+    "forced_termination": false,
+    "panics": 0,
+    "tile_task_errors": 0,
+    "volume_sidecars": 2,
+    "decoded_ct_bytes_exact_per_volume": 262144
+  },
+  "validated_combined_commit": "f68f686cdd73ca08cf39f364cabc7988a101c208",
+  "platform": "Windows MSVC debug build",
+  "limitations": [
+    "Final launch validation includes the separate Windows build/cache/reader and above-max-LOD sampling fixes",
+    "OpenGL captures showed a blank surface in this session; GUI display requires manual verification",
+    "Linux, macOS and wasm not run"
+  ]
+}

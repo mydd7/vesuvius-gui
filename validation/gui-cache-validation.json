@@ -1,0 +1,31 @@
+{
+  "branch": "fix/gui-cache-directory",
+  "regression_tests": {
+    "before_passed": 0,
+    "before_failed": 1,
+    "after_passed": 1
+  },
+  "tested_requested_roots": 2,
+  "paths_with_spaces": true,
+  "gui": {
+    "base_volume_cache_under_selected_root": true,
+    "overlay_cache_under_selected_root": true,
+    "startup_maintenance_on_selected_root": true,
+    "shutdown_flush_on_selected_root": true,
+    "exit_code": 0,
+    "forced_termination": false,
+    "panics": 0,
+    "tile_task_errors": 0,
+    "volume_sidecars": 2,
+    "source_commit": "f68f686cdd73ca08cf39f364cabc7988a101c208",
+    "decoded_ct_bytes_exact_per_volume": 262144
+  },
+  "platform": "Windows MSVC",
+  "limitations": [
+    "Remote metadata/index caches retain their existing default locations",
+    "Existing default-root CT caches are not moved",
+    "Sampling logic unchanged by this branch",
+    "GUI display requires manual verification; automated OpenGL captures were blank",
+    "Linux and macOS not run"
+  ]
+}

@@ -1,0 +1,1785 @@
+{
+  "sample": "PHerc0800",
+  "volume_shape": [
+    21,
+    980,
+    980
+  ],
+  "reference_voxels": 2592,
+  "stored_chunk_voxels": 1419,
+  "interior_voxel_values_unchanged": true,
+  "before": {
+    "exclusive_z_bound": "Some(0)",
+    "negative_interpolation": "Some(82)"
+  },
+  "after": {
+    "exclusive_z_bound": "None",
+    "negative_interpolation": "None"
+  },
+  "regression_tests": {
+    "before_passed": 1,
+    "before_failed": 2,
+    "after_passed": 3
+  },
+  "codec_tests_passed": 3,
+  "combined_exit_code": 0,
+  "platform": "First six reader/codec changes: Windows MSVC 14.44 and GNU GCC 16.1; later changes: Windows MSVC",
+  "limitations": [
+    "Linux and macOS not executed",
+    "Interpolation requires all eight neighbors inside the volume"
+  ],
+  "storage_order": {
+    "reference_shape": [
+      3,
+      16,
+      12
+    ],
+    "voxel_checks": 1152,
+    "interpolation_checks": 4,
+    "before_failed_tests": 2,
+    "after_passed_tests": 2,
+    "compressed_arrays": "1152 real CT voxels match with the separate Blosc memcpy fix"
+  },
+  "blosc_memcpy": {
+    "frame_cases": 9,
+    "array_voxel_checks": 576,
+    "tests_passed": 2
+  },
+  "raw_blocks": {
+    "real_volume_chunks": 6,
+    "ordinary_compression_cases_exact": 24,
+    "before_wrong_bytes_per_affected_full_chunk": 1834939,
+    "regression_wrong_bytes_before": 65536,
+    "regression_wrong_bytes_after": 0
+  },
+  "bitshuffle": {
+    "cases_wrong_before": 12,
+    "cases_wrong_after": 0,
+    "regression_fixture_cases": 3,
+    "all_compression_matrix_cases_exact": 36
+  },
+  "reader_codec_tests_passed": 20,
+  "compiler_comparison": {
+    "decoded_voxels": 16777216,
+    "different_voxels": 0,
+    "max_difference": 0,
+    "msvc_sha256": "169285a25c013b58a42879366a02ded2c71722be4e5b0f0dd2a9850475865aef",
+    "gnu_sha256": "169285a25c013b58a42879366a02ded2c71722be4e5b0f0dd2a9850475865aef"
+  },
+  "render_cli": [
+    {
+      "case": "png-single",
+      "shape": [
+        67,
+        65
+      ],
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a",
+      "matches_png_single": true,
+      "elapsed_seconds": 3.0581772000005003
+    },
+    {
+      "case": "png-tiled",
+      "shape": [
+        67,
+        65
+      ],
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a",
+      "matches_png_single": true,
+      "elapsed_seconds": 1.165092299997923
+    },
+    {
+      "case": "tif-single",
+      "shape": [
+        67,
+        65
+      ],
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a",
+      "matches_png_single": true,
+      "elapsed_seconds": 1.0530138000031002
+    },
+    {
+      "case": "tif-tiled",
+      "shape": [
+        67,
+        65
+      ],
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a",
+      "matches_png_single": true,
+      "elapsed_seconds": 1.057712600006198
+    }
+  ],
+  "windows_cache": {
+    "passed": 91,
+    "ignored": 3,
+    "mode": "one test per process",
+    "limitations": [
+      "The full suite in one process exhausts Windows commit as global registries retain large mapped shards"
+    ]
+  },
+  "windows_mapping_profile": [
+    {
+      "view_length": 549755813888,
+      "private_before": 10653696,
+      "private_after": 1086529536
+    },
+    {
+      "view_length": 1048576,
+      "private_before": 10686464,
+      "private_after": 10690560
+    },
+    {
+      "attempt": 1,
+      "mode": "writable_then_readonly",
+      "elapsed_seconds": 1.4217438999985461,
+      "private_bytes": 1086529536
+    },
+    {
+      "attempt": 1,
+      "mode": "readonly",
+      "elapsed_seconds": 0.004671099999541184,
+      "private_bytes": 1086529536
+    },
+    {
+      "attempt": 2,
+      "mode": "writable_then_readonly",
+      "elapsed_seconds": 1.9213330000020505,
+      "private_bytes": 1086529536
+    },
+    {
+      "attempt": 2,
+      "mode": "readonly",
+      "elapsed_seconds": 0.005312699999194592,
+      "private_bytes": 1086529536
+    },
+    {
+      "attempt": 3,
+      "mode": "writable_then_readonly",
+      "elapsed_seconds": 1.8511037999996915,
+      "private_bytes": 1086529536
+    },
+    {
+      "attempt": 3,
+      "mode": "readonly",
+      "elapsed_seconds": 0.0048123000015039,
+      "private_bytes": 1086529536
+    }
+  ],
+  "blocksize_metadata": {
+    "before": "65536 rejected as out of range for u8",
+    "requested_block_sizes": [
+      0,
+      65536,
+      131072
+    ],
+    "voxel_comparisons": 9216,
+    "after": "all match",
+    "platform": "Windows MSVC"
+  },
+  "partial_ome_levels": {
+    "reader_tests_passed": 5,
+    "cache_tests_passed": 2,
+    "reader_nearest_comparisons": 122880,
+    "cache_extracted_voxels": 47040,
+    "interpolation_cases": 6,
+    "before_initial_tests": {
+      "passed": 1,
+      "failed": 3
+    },
+    "platform": "Windows MSVC",
+    "limitations": [
+      "Public zarr_contexts field now holds optional contexts",
+      "Original odd dimensions cannot be recovered exactly when the base array is absent",
+      "Remote v3 integration not run"
+    ]
+  },
+  "blocking_download": {
+    "sample": "PHerc0800",
+    "transport": "local HTTP server with real CT payload",
+    "ct_bytes": 3072,
+    "ct_sha256": "3d3978530ba2569cf61e584fd6105b74b2ada3338ae66a0898374549392b9a81",
+    "concurrent_readers": 2,
+    "responses_tested": [
+      200,
+      404,
+      403,
+      429,
+      500,
+      503
+    ],
+    "concurrent_successful_byte_comparisons": 6144,
+    "retry_successful_voxel_comparisons": 12288,
+    "warm_cache_checked": true,
+    "missing_marker_checked": true,
+    "same_context_retry_checked": true,
+    "before": {
+      "concurrency": "child process killed by the test after the ten-second deadline",
+      "status_errors": "403 returned as missing data instead of a reported error"
+    },
+    "after": {
+      "passed": 2,
+      "failed": 0,
+      "additional_repetitions_passed": 5
+    },
+    "platform": "Windows MSVC",
+    "limitations": [
+      "Linux and macOS not run",
+      "Unexpected statuses panic under the existing blocking reader API; caller can retry after handling the error",
+      "Existing .missing markers are not migrated",
+      "No rendering-throughput claim"
+    ],
+    "tested_commit": "44bd1b4cbfc98111df5ab3d8ba84cb83f79a3b7f",
+    "baseline_commit": "bf08725f038399ff7ecba3bcfa85dd64b749875e",
+    "baseline_test_result": {
+      "passed": 0,
+      "failed": 2
+    },
+    "build_adaptation": "Separate Windows codec build fix"
+  },
+  "renderer_tests_passed": 23,
+  "relative_cache_identity": {
+    "branch": "fix/relative-volume-cache-key",
+    "source": {
+      "volume_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr",
+      "native_chunk": "91/47/25",
+      "native_chunk_sha256": "6784a75ce2a9df9b28831a755e1c0524a252b1b93dabae5af4d0bb9d578f563f",
+      "A_roi_origin_xyz": [
+        3264,
+        6031,
+        11712
+      ],
+      "B_roi_origin_xyz": [
+        3232,
+        6048,
+        11680
+      ],
+      "roi_shape_zyx": [
+        64,
+        64,
+        64
+      ],
+      "processing": "Unchanged contiguous samples from the same native CT chunk"
+    },
+    "regression_test": {
+      "before_passed": 0,
+      "before_failed": 1,
+      "after_passed": 1,
+      "A_sample_value": 137,
+      "B_sample_value": 145
+    },
+    "cli_before": [
+      {
+        "case": "A",
+        "nonzero_pixels": 256,
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+      },
+      {
+        "case": "B-shared",
+        "nonzero_pixels": 256,
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+      },
+      {
+        "case": "B-fresh",
+        "nonzero_pixels": 256,
+        "pixel_sha256": "df94a96099eac7ceb44ad792b9003a10616c2b23f6a00ae72057a1b8e53af8d4"
+      }
+    ],
+    "cli_after_reusing_previous_shared_cache": [
+      {
+        "case": "A",
+        "shape": [
+          16,
+          16
+        ],
+        "nonzero_pixels": 256,
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+        "exit_code": 0
+      },
+      {
+        "case": "B-shared",
+        "shape": [
+          16,
+          16
+        ],
+        "nonzero_pixels": 256,
+        "pixel_sha256": "df94a96099eac7ceb44ad792b9003a10616c2b23f6a00ae72057a1b8e53af8d4",
+        "exit_code": 0
+      },
+      {
+        "case": "B-fresh",
+        "shape": [
+          16,
+          16
+        ],
+        "nonzero_pixels": 256,
+        "pixel_sha256": "df94a96099eac7ceb44ad792b9003a10616c2b23f6a00ae72057a1b8e53af8d4",
+        "exit_code": 0
+      }
+    ],
+    "combined_validation_commit": "9bfc896e7eda42ff643d884dfdd648ef04233af6",
+    "combined_active_tests": 138,
+    "combined_ignored_tests": 3,
+    "platform": "Windows MSVC",
+    "limitations": [
+      "Windows regression run needs the separate C3D build, sparse file and read-only mapping fixes",
+      "Linux and macOS were not run",
+      "Previously cached relative entries are left unused",
+      "Absolute path keys are preserved; symlink aliases are not canonicalized"
+    ],
+    "relative_resolution": "current_dir joined with the relative path; no new path-resolution API version requirement"
+  },
+  "positive_renderer_options": {
+    "branch": "fix/render-zero-options",
+    "before": [
+      {
+        "option": "--tile-size",
+        "value": "0",
+        "exit_code": 101,
+        "panicked": true
+      },
+      {
+        "option": "--worker-threads",
+        "value": "0",
+        "exit_code": 101,
+        "panicked": true
+      }
+    ],
+    "after": {
+      "invalid_arguments": [
+        {
+          "option": "--tile-size",
+          "value": "0",
+          "exit_code": 2,
+          "panicked": false,
+          "created_output_directory": false
+        },
+        {
+          "option": "--worker-threads",
+          "value": "0",
+          "exit_code": 2,
+          "panicked": false,
+          "created_output_directory": false
+        }
+      ],
+      "valid_ct_control": {
+        "shape": [
+          16,
+          16
+        ],
+        "nonzero_pixels": 256,
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+        "exit_code": 0
+      }
+    },
+    "regression_tests": {
+      "before_passed": 1,
+      "before_failed": 2,
+      "after_passed": 3
+    },
+    "combined_validation_commit": "03d6a35273dd56b82a778b1038eca440fc78a686",
+    "combined_active_tests": 137,
+    "combined_ignored_tests": 3,
+    "platform": "Windows MSVC",
+    "limitations": [
+      "Linux and macOS were not run"
+    ]
+  },
+  "empty_previews": {
+    "branch": "fix/cache-empty-previews",
+    "source": {
+      "volume_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr/",
+      "native_chunk": "91/47/25",
+      "native_chunk_sha256": "6784a75ce2a9df9b28831a755e1c0524a252b1b93dabae5af4d0bb9d578f563f",
+      "roi_origin_xyz": [
+        3264,
+        6031,
+        11712
+      ],
+      "roi_shape_zyx": [
+        64,
+        64,
+        64
+      ],
+      "roi_sha256": "2949bae623b925e0977397bc58ef0148bfc0a2d2b1cc5b11ecc4e458955b824b",
+      "coarse_shape_zyx": [
+        32,
+        32,
+        32
+      ],
+      "coarse_sha256": "f3d5e91ed46c6d1fb6b673c98d116074f265525cc685e919570cf6d9c2f7dc3c",
+      "processing": "Unchanged real CT values at every second voxel, with scale 2 metadata",
+      "fine_chunk": "Intentionally absent to model a sparse or partially downloaded array; fill value is zero"
+    },
+    "regression_tests": {
+      "before_passed": 1,
+      "before_failed": 4,
+      "after_passed": 5
+    },
+    "prepared_cache": {
+      "fine_state": "Empty",
+      "preview_nonzero_voxels": 262144,
+      "nearest_value": 0
+    },
+    "cli_same_persisted_cache": {
+      "before": {
+        "shape": [
+          16,
+          16
+        ],
+        "nonzero_pixels": 256,
+        "pixel_sha256": "2ea3b1d63fc752bf759c396c83fa1d783e25ae33327022d6f9611a90620da695",
+        "exit_code": 0
+      },
+      "after": {
+        "shape": [
+          16,
+          16
+        ],
+        "nonzero_pixels": 0,
+        "pixel_sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+        "exit_code": 0
+      }
+    },
+    "valid_ct_control": {
+      "shape": [
+        16,
+        16
+      ],
+      "nonzero_pixels": 256,
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+    },
+    "combined_validation_commit": "6b53f0865d62760a20af26b01062f6b3375b6993",
+    "combined_active_tests": 134,
+    "combined_ignored_tests": 3,
+    "platform": "Windows MSVC",
+    "limitations": [
+      "Linux and macOS were not run",
+      "Sparse fine data is intentionally absent in this reproduction",
+      "GUI display still requires manual confirmation"
+    ]
+  },
+  "gui_initial_position": {
+    "branch": "feat/gui-initial-xyz",
+    "before": {
+      "exit_code": 2,
+      "xyz_option_supported": false
+    },
+    "argument_tests_passed": 3,
+    "requested_coordinates": [
+      24,
+      24,
+      24
+    ],
+    "gui_after": {
+      "exit_code": 0,
+      "forced_termination": false,
+      "panics": 0,
+      "tile_task_errors": 0,
+      "requested_coordinates_logged": true,
+      "source_commit": "f68f686cdd73ca08cf39f364cabc7988a101c208"
+    },
+    "decoded_ct_caches": [
+      {
+        "volume": "C base",
+        "decoded_bytes": 262144,
+        "sha256": "2949bae623b925e0977397bc58ef0148bfc0a2d2b1cc5b11ecc4e458955b824b"
+      },
+      {
+        "volume": "F overlay",
+        "decoded_bytes": 262144,
+        "sha256": "2949bae623b925e0977397bc58ef0148bfc0a2d2b1cc5b11ecc4e458955b824b"
+      }
+    ],
+    "platform": "Windows MSVC debug build",
+    "limitations": [
+      "GUI launch validation includes the separate reader/cache/startup fixes",
+      "The cached CT bytes and initial coordinates are verified; GPU display still needs manual verification because automated OpenGL captures were blank",
+      "Linux and macOS not run"
+    ]
+  },
+  "invalid_samples": {
+    "branch": "fix/cache-invalid-samples",
+    "source": {
+      "volume_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr",
+      "surface": "20251029010146-auto_grown_20251029010146642",
+      "native_chunk": "91/47/25",
+      "native_chunk_sha256": "6784a75ce2a9df9b28831a755e1c0524a252b1b93dabae5af4d0bb9d578f563f",
+      "roi_origin_xyz": [
+        3312,
+        6031,
+        11712
+      ],
+      "roi_shape_zyx": [
+        64,
+        64,
+        16
+      ],
+      "roi_sha256": "712ffe92c3992fae6d0cc26b52aee439eb1302716c7c41faee35c9087fbe8061",
+      "negative_case": {
+        "cell_rc": [
+          40,
+          12
+        ],
+        "crop": "242+802-16x16",
+        "bounds": [
+          [
+            -9.403564453125,
+            22.84423828125,
+            25.33203125
+          ],
+          [
+            -2.110107421875,
+            42.52197265625,
+            45.7861328125
+          ]
+        ]
+      },
+      "valid_control": {
+        "source_roi": "original 64-cubed CT ROI",
+        "cell_rc": [
+          40,
+          12
+        ],
+        "crop": "242+802-16x16"
+      }
+    },
+    "regression_tests": {
+      "before_passed": 1,
+      "before_failed": 5,
+      "after_passed": 6
+    },
+    "before": [
+      {
+        "case": "negative",
+        "exit_code": 0,
+        "nonzero_pixels": 256,
+        "pixel_sha256": "4dcf94c6c8f0f9e2dd9aec9291a8bc26aaf202ee5c64586eb35800b5ceec4cbd"
+      },
+      {
+        "case": "valid-control",
+        "exit_code": 0,
+        "nonzero_pixels": 256,
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+      }
+    ],
+    "after": [
+      {
+        "case": "negative",
+        "exit_code": 0,
+        "nonzero_pixels": 0,
+        "pixel_sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1"
+      },
+      {
+        "case": "valid-control",
+        "exit_code": 0,
+        "nonzero_pixels": 256,
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+      }
+    ],
+    "negative_crop_expectation": "All four corners of the real mesh cell have x < -1 in the narrow CT ROI; all sampled points are outside the cropped volume and must be zero",
+    "valid_control": "Same mesh cell inside the original 64-cubed CT ROI; output hash unchanged",
+    "image_processing": "Original 16x16 grayscale render pixels, nearest-neighbor enlargement, labels; no screenshot or generated image",
+    "platform": "Windows MSVC debug build",
+    "limitations": [
+      "Existing positive upper-bound and edge interpolation behavior unchanged",
+      "Linux and macOS not run",
+      "No ink-recognition accuracy or throughput claim"
+    ]
+  },
+  "gui_runtime": {
+    "branch": "fix/gui-blocking-runtime",
+    "before": {
+      "exit_code": 101,
+      "error": "Cannot drop a runtime in a context where blocking is not allowed",
+      "operation": "open a local PHerc0800 OME-Zarr CT ROI and tifxyz surface"
+    },
+    "after": {
+      "native_window_observed": true,
+      "frame_processing_observed": true,
+      "base_and_overlay_opened": true,
+      "exit_code": 0,
+      "forced_termination": false,
+      "panics": 0,
+      "tile_task_errors": 0,
+      "volume_sidecars": 2,
+      "decoded_ct_bytes_exact_per_volume": 262144
+    },
+    "validated_combined_commit": "f68f686cdd73ca08cf39f364cabc7988a101c208",
+    "platform": "Windows MSVC debug build",
+    "limitations": [
+      "Final launch validation includes the separate Windows build/cache/reader and above-max-LOD sampling fixes",
+      "OpenGL captures showed a blank surface in this session; GUI display requires manual verification",
+      "Linux, macOS and wasm not run"
+    ]
+  },
+  "gui_cache_directory": {
+    "branch": "fix/gui-cache-directory",
+    "regression_tests": {
+      "before_passed": 0,
+      "before_failed": 1,
+      "after_passed": 1
+    },
+    "tested_requested_roots": 2,
+    "paths_with_spaces": true,
+    "gui": {
+      "base_volume_cache_under_selected_root": true,
+      "overlay_cache_under_selected_root": true,
+      "startup_maintenance_on_selected_root": true,
+      "shutdown_flush_on_selected_root": true,
+      "exit_code": 0,
+      "forced_termination": false,
+      "panics": 0,
+      "tile_task_errors": 0,
+      "volume_sidecars": 2,
+      "source_commit": "f68f686cdd73ca08cf39f364cabc7988a101c208",
+      "decoded_ct_bytes_exact_per_volume": 262144
+    },
+    "platform": "Windows MSVC",
+    "limitations": [
+      "Remote metadata/index caches retain their existing default locations",
+      "Existing default-root CT caches are not moved",
+      "Sampling logic unchanged by this branch",
+      "GUI display requires manual verification; automated OpenGL captures were blank",
+      "Linux and macOS not run"
+    ]
+  },
+  "zoom_beyond_pyramid": {
+    "branch": "fix/cache-zoom-beyond-pyramid",
+    "fixture": {
+      "volume_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr/",
+      "native_chunk": "91/47/25",
+      "native_chunk_sha256": "6784a75ce2a9df9b28831a755e1c0524a252b1b93dabae5af4d0bb9d578f563f",
+      "crop_zyx": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "shape_zyx": [
+        4,
+        8,
+        8
+      ],
+      "sha256": "25fa74db773fb8aea860d7c6010c80e54ad2763f2145fba10e3efc0350253e27",
+      "processing": "Unchanged native uint8 CT values, uncompressed C order"
+    },
+    "regression_tests": {
+      "before_passed": 0,
+      "before_failed": 5,
+      "after_passed": 5
+    },
+    "cases": [
+      "nearest sampling preserves world position",
+      "interpolation preserves fractional position",
+      "ray gathering preserves positions and steps",
+      "painting preserves world pixel positions",
+      "prefetch dispatches the available level"
+    ],
+    "gui_before": {
+      "worker_panics": 4,
+      "tile_task_errors": 2,
+      "error": "attempt to subtract with overflow"
+    },
+    "gui_after": {
+      "exit_code": 0,
+      "forced_termination": false,
+      "panics": 0,
+      "tile_task_errors": 0,
+      "volume_sidecars": 2,
+      "source_commit": "f68f686cdd73ca08cf39f364cabc7988a101c208",
+      "decoded_ct_bytes_exact_per_volume": 262144
+    },
+    "platform": "Windows MSVC",
+    "limitations": [
+      "Uses the coarsest available cache level rather than constructing an additional pyramid level",
+      "GUI display requires manual verification; automated OpenGL captures were blank",
+      "Linux and macOS not run"
+    ]
+  },
+  "chunk_dependencies": {
+    "branch": "fix/cache-chunk-dependencies",
+    "fixture": {
+      "volume_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr/",
+      "native_chunk": "91/47/25",
+      "native_chunk_sha256": "6784a75ce2a9df9b28831a755e1c0524a252b1b93dabae5af4d0bb9d578f563f",
+      "crop_zyx": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "shape_zyx": [
+        4,
+        8,
+        8
+      ],
+      "sha256": "25fa74db773fb8aea860d7c6010c80e54ad2763f2145fba10e3efc0350253e27",
+      "processing": "Unchanged native uint8 CT values, uncompressed C order"
+    },
+    "regression_tests": {
+      "before_passed": 1,
+      "before_failed": 3,
+      "after_passed": 4
+    },
+    "before": {
+      "async_child_failure": "parent stays Pending",
+      "already_failed_child": "parent becomes persistently Empty",
+      "already_resident_child": "parent stays Pending",
+      "out_of_bounds_children": "correctly zero padded"
+    },
+    "after": {
+      "async_child_failure": "parent reaches a retryable CooldownMiss",
+      "already_failed_child": "parent reaches a retryable CooldownMiss",
+      "already_resident_child": "parent becomes Resident with exact CT averages",
+      "recovery": "both failed cases reproduce exact CT averages after test-controlled cooldown expiry",
+      "out_of_bounds_children": "still correctly zero padded"
+    },
+    "ct_voxels": 256,
+    "averaged_ct_voxels_per_result": 32,
+    "zero_padding_voxels_per_result": 262112,
+    "repetitions": [
+      {
+        "iteration": 1,
+        "passed": 4,
+        "exit_code": 0
+      },
+      {
+        "iteration": 2,
+        "passed": 4,
+        "exit_code": 0
+      },
+      {
+        "iteration": 3,
+        "passed": 4,
+        "exit_code": 0
+      },
+      {
+        "iteration": 4,
+        "passed": 4,
+        "exit_code": 0
+      },
+      {
+        "iteration": 5,
+        "passed": 4,
+        "exit_code": 0
+      }
+    ],
+    "platform": "Windows MSVC",
+    "limitations": [
+      "Read failure injected into the native CT Compute source",
+      "Tests expire cooldown map entries directly rather than waiting ten seconds",
+      "Small cache shards used to isolate dependency behavior from unrelated Windows mapping/allocation problems",
+      "Linux and macOS not run",
+      "Existing incorrect persisted Empty parent entries are not migrated"
+    ]
+  },
+  "tiff_flush": {
+    "branch": "fix/flush-tiled-tiff",
+    "fixture": {
+      "volume_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr",
+      "surface": "20251029010146-auto_grown_20251029010146642",
+      "crop": "242+802-16x16",
+      "layer": 32,
+      "dimensions": [
+        16,
+        16
+      ],
+      "sha256": "1dbda56b0713f3c411c375f694e45e988c67b52da076256e764d4949e509dc68",
+      "processing": "Grayscale bytes from the actual global-coordinate CT surface render, without intensity changes",
+      "surface_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/20251029010146-on-20250521135224-8.64um.tifxyz/",
+      "middle_layer": 32
+    },
+    "failure_injection": "Writer rejects the final 4-byte or 8-byte zero next-IFD link when BufWriter flushes it",
+    "regression_tests": {
+      "before_passed": 1,
+      "before_failed": 2,
+      "after_passed": 3
+    },
+    "independent_renderer_tests_passed": 10,
+    "before": "TIFF and BigTIFF encoding return success despite the final buffered write failing during Drop",
+    "after": "Final buffered write failures are returned to the caller",
+    "pixel_roundtrip": "All 256 real CT pixel bytes match for standard TIFF and BigTIFF",
+    "platform": "Windows MSVC",
+    "limitations": [
+      "Failure injected through Write/Seek; no filesystem filled deliberately",
+      "Linux and macOS not run",
+      "Explicit flush reports buffered I/O errors; it does not request fsync or power-loss durability"
+    ]
+  },
+  "http_range_responses": {
+    "branch": "fix/downloader-range-response",
+    "fixture": {
+      "repository_file": "vesuvius-c3d/tests/fixtures/subchunk_5_3_3__0_0_0.c3dc",
+      "compressed_bytes": 687257,
+      "sha256": "91d2c86ebe72b1b2a61d721eeaeb95b27d7eec98816992eb75b96c86c7c621db",
+      "decoded_bytes": 16777216
+    },
+    "regression_tests": {
+      "before_passed": 2,
+      "before_failed": 5,
+      "after_passed": 7
+    },
+    "cases": {
+      "valid_206": "bytes match the fixture and all decoded voxels match direct decoding",
+      "ignored_range_200": "retryable error before reading the response body",
+      "short_206": "retryable error instead of a successful partial chunk",
+      "wrong_offset_206": "retryable error even with the requested number of CT bytes",
+      "missing_content_range": "retryable error before reading body",
+      "invalid_content_range": "reversed bounds, invalid total, wrong unit and overflowing offsets rejected",
+      "unknown_complete_length": "exact CT bytes accepted with uppercase BYTES and unknown total"
+    },
+    "platform": "Windows MSVC",
+    "limitations": [
+      "Linux and macOS not executed",
+      "Existing incorrectly persisted response bodies are not migrated",
+      "No general throughput measurement"
+    ],
+    "prior_body_checks_repetitions": [
+      {
+        "iteration": 1,
+        "passed": 3,
+        "exit_code": 0
+      },
+      {
+        "iteration": 2,
+        "passed": 3,
+        "exit_code": 0
+      },
+      {
+        "iteration": 3,
+        "passed": 3,
+        "exit_code": 0
+      },
+      {
+        "iteration": 4,
+        "passed": 3,
+        "exit_code": 0
+      },
+      {
+        "iteration": 5,
+        "passed": 3,
+        "exit_code": 0
+      }
+    ],
+    "prior_body_checks_repetitions_note": "Historical checks of the initial three body validation cases, before Content-Range validation was added",
+    "content_range_extension_tests": {
+      "previous_implementation_passed": 4,
+      "previous_implementation_failed": 3,
+      "after_passed": 7
+    },
+    "live_public_header": {
+      "url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr/0/91/47/25",
+      "requested_range": "bytes=0-31",
+      "status": 206,
+      "content_range": "bytes 0-31/2097152",
+      "bytes_read": 32
+    },
+    "specification": "https://www.rfc-editor.org/rfc/rfc9110.html#section-14.4"
+  },
+  "cache_storage_order": {
+    "branch": "fix/cache-zarr-fortran-order",
+    "source": {
+      "volume": "PHerc0800/20250521135224-8.640um-1.2m-116keV-masked.zarr",
+      "native_chunk": "91/47/25",
+      "native_chunk_sha256": "6784a75ce2a9df9b28831a755e1c0524a252b1b93dabae5af4d0bb9d578f563f",
+      "roi_origin_xyz": [
+        3264,
+        6031,
+        11712
+      ],
+      "roi_shape_zyx": [
+        64,
+        64,
+        64
+      ],
+      "roi_sha256": "2949bae623b925e0977397bc58ef0148bfc0a2d2b1cc5b11ecc4e458955b824b",
+      "surface": "20251029010146-auto_grown_20251029010146642",
+      "crop": "242+802-16x16",
+      "mesh_cell_rc": [
+        40,
+        12
+      ],
+      "local_mesh_cell_bounds_xyz": [
+        [
+          38.596435546875,
+          22.84423828125,
+          25.33203125
+        ],
+        [
+          45.889892578125,
+          42.52197265625,
+          45.7861328125
+        ]
+      ],
+      "transform": "Subtract the integer ROI origin from both the volume frame and mesh; CT bytes and relative geometry unchanged",
+      "volume_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr"
+    },
+    "regression_tests": {
+      "before_passed": 1,
+      "before_failed": 2,
+      "after_passed": 3
+    },
+    "extract_fixture": {
+      "shape_zyx": [
+        3,
+        16,
+        12
+      ],
+      "chunks_zyx": [
+        4,
+        8,
+        6
+      ],
+      "ct_voxels_per_case": 576,
+      "padded_voxels_per_case": 261568,
+      "cases": [
+        "local C",
+        "local F",
+        "download-payload F"
+      ]
+    },
+    "renders": [
+      {
+        "phase": "before",
+        "order": "C",
+        "exit_code": 0,
+        "shape": [
+          16,
+          16
+        ],
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+        "nonzero_pixels": 256
+      },
+      {
+        "phase": "before",
+        "order": "F",
+        "exit_code": 0,
+        "shape": [
+          16,
+          16
+        ],
+        "pixel_sha256": "fd01d1f4ff8d5c0337aa1646083aa9b004bbde7f0ac76d1aa2d2d6c1492edfbe",
+        "nonzero_pixels": 256
+      },
+      {
+        "phase": "after",
+        "order": "C",
+        "exit_code": 0,
+        "shape": [
+          16,
+          16
+        ],
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+        "nonzero_pixels": 256
+      },
+      {
+        "phase": "after",
+        "order": "F",
+        "exit_code": 0,
+        "shape": [
+          16,
+          16
+        ],
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+        "nonzero_pixels": 256
+      }
+    ],
+    "before_fortran_vs_c": {
+      "different_pixels": 247,
+      "max_absolute_difference": 62
+    },
+    "after_fortran_equals_c": true,
+    "limitations": [
+      "Windows MSVC debug build only",
+      "No GPU run",
+      "Previously persisted incorrect cache chunks are not migrated",
+      "Live downloads tested against a loopback HTTP server serving the real CT fixture; no new S3 throughput measurement"
+    ],
+    "irregular_native_chunks": {
+      "shape_zyx": [
+        96,
+        96,
+        96
+      ],
+      "chunks_zyx": [
+        48,
+        40,
+        56
+      ],
+      "roi_origin_xyz": [
+        3232,
+        6031,
+        11680
+      ],
+      "roi_sha256": "df193aa33dad88254fdb3d74ff9ea4810e2072769d270630b8fdb6d964449079",
+      "renders": [
+        {
+          "phase": "before",
+          "order": "C",
+          "exit_code": 0,
+          "nonzero_pixels": 256,
+          "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+        },
+        {
+          "phase": "before",
+          "order": "F",
+          "exit_code": 0,
+          "nonzero_pixels": 256,
+          "pixel_sha256": "2a3d3e569c2f07e7a55aef735df36932b91daab1a1329e8f1a19b22721ceb679"
+        },
+        {
+          "phase": "after",
+          "order": "C",
+          "exit_code": 0,
+          "nonzero_pixels": 256,
+          "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+        },
+        {
+          "phase": "after",
+          "order": "F",
+          "exit_code": 0,
+          "nonzero_pixels": 256,
+          "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+        }
+      ],
+      "after_fortran_equals_c": true,
+      "before_fortran_different_pixels": 254
+    },
+    "local_http_pipeline": [
+      {
+        "phase": "before",
+        "order": "C",
+        "exit_code": 0,
+        "nonzero_pixels": 256,
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+        "native_chunk_gets": 4
+      },
+      {
+        "phase": "before",
+        "order": "F",
+        "exit_code": 0,
+        "nonzero_pixels": 256,
+        "pixel_sha256": "2a3d3e569c2f07e7a55aef735df36932b91daab1a1329e8f1a19b22721ceb679",
+        "native_chunk_gets": 4
+      },
+      {
+        "phase": "after",
+        "order": "C",
+        "exit_code": 0,
+        "nonzero_pixels": 256,
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+        "native_chunk_gets": 4
+      },
+      {
+        "phase": "after",
+        "order": "F",
+        "exit_code": 0,
+        "nonzero_pixels": 256,
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+        "native_chunk_gets": 4
+      }
+    ]
+  },
+  "crop_parser": {
+    "branch": "fix/render-crop-validation",
+    "regression_tests": {
+      "before_passed": 1,
+      "before_failed": 4,
+      "after_passed": 5
+    },
+    "independent_renderer_tests_passed": 12,
+    "cli": [
+      {
+        "phase": "before",
+        "case": "prefix",
+        "exit_code": 0,
+        "panicked": false,
+        "output_written": true,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "phase": "before",
+        "case": "overflow",
+        "exit_code": 101,
+        "panicked": true,
+        "output_written": false
+      },
+      {
+        "phase": "after",
+        "case": "prefix",
+        "exit_code": 2,
+        "panicked": false,
+        "output_written": false
+      },
+      {
+        "phase": "after",
+        "case": "overflow",
+        "exit_code": 2,
+        "panicked": false,
+        "output_written": false
+      }
+    ],
+    "platform": "Windows MSVC",
+    "limitations": [
+      "Linux and macOS not run",
+      "Surface bounds validation unchanged"
+    ]
+  },
+  "local_path": {
+    "branch": "fix/local-volume-path-name",
+    "regression_tests": {
+      "before_passed": 0,
+      "before_failed": 3,
+      "after_passed": 3
+    },
+    "platform": "Windows MSVC",
+    "real_local_cli_before": {
+      "exit_code": 101,
+      "os_error": 123
+    },
+    "real_local_cli_after": {
+      "exit_code": 0
+    },
+    "limitations": [
+      "Existing saved volume IDs are not migrated",
+      "Path canonicalization is unchanged",
+      "Linux and macOS not executed"
+    ]
+  },
+  "origin_chunk": {
+    "source": {
+      "volume": "PHerc0800/20250521135224-8.640um-1.2m-116keV-masked.zarr",
+      "native_chunk": "91/47/25",
+      "native_chunk_sha256": "6784a75ce2a9df9b28831a755e1c0524a252b1b93dabae5af4d0bb9d578f563f",
+      "roi_origin_xyz": [
+        3264,
+        6031,
+        11712
+      ],
+      "roi_shape_zyx": [
+        64,
+        64,
+        64
+      ],
+      "roi_sha256": "2949bae623b925e0977397bc58ef0148bfc0a2d2b1cc5b11ecc4e458955b824b",
+      "surface": "20251029010146-auto_grown_20251029010146642",
+      "crop": "242+802-16x16",
+      "mesh_cell_rc": [
+        40,
+        12
+      ],
+      "local_mesh_cell_bounds_xyz": [
+        [
+          38.596435546875,
+          22.84423828125,
+          25.33203125
+        ],
+        [
+          45.889892578125,
+          42.52197265625,
+          45.7861328125
+        ]
+      ],
+      "transform": "Subtract the integer ROI origin from both the volume frame and mesh; CT bytes and relative geometry unchanged",
+      "volume_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr"
+    },
+    "collector_regressions": {
+      "before_passed": 1,
+      "before_failed": 2,
+      "after_passed": 3
+    },
+    "before": [
+      {
+        "case": "global-reference",
+        "shape": [
+          16,
+          16
+        ],
+        "nonzero_pixels": 256,
+        "pixel_sha256": "1dbda56b0713f3c411c375f694e45e988c67b52da076256e764d4949e509dc68"
+      },
+      {
+        "case": "local-0",
+        "shape": [
+          16,
+          16
+        ],
+        "nonzero_pixels": 0,
+        "pixel_sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1"
+      },
+      {
+        "case": "local-1",
+        "shape": [
+          16,
+          16
+        ],
+        "nonzero_pixels": 0,
+        "pixel_sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1"
+      },
+      {
+        "case": "local-2",
+        "shape": [
+          16,
+          16
+        ],
+        "nonzero_pixels": 0,
+        "pixel_sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1"
+      }
+    ],
+    "after": [
+      {
+        "case": "global-reference",
+        "shape": [
+          16,
+          16
+        ],
+        "nonzero_pixels": 256,
+        "pixel_sha256": "1dbda56b0713f3c411c375f694e45e988c67b52da076256e764d4949e509dc68"
+      },
+      {
+        "case": "local-0",
+        "shape": [
+          16,
+          16
+        ],
+        "nonzero_pixels": 256,
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+      },
+      {
+        "case": "local-1",
+        "shape": [
+          16,
+          16
+        ],
+        "nonzero_pixels": 256,
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+      },
+      {
+        "case": "local-2",
+        "shape": [
+          16,
+          16
+        ],
+        "nonzero_pixels": 256,
+        "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+      }
+    ],
+    "independent_legacy_reader": {
+      "nonzero_pixels": 256,
+      "pixel_sha256": "9fb76971061fc0a524d7232cc7aa083f37ec124acbb43e9626385ed5ce030534",
+      "different_pixels": 6,
+      "max_absolute_difference": 1
+    },
+    "global_coordinate_reference": {
+      "different_pixels": 2,
+      "max_absolute_difference": 1
+    },
+    "limitations": [
+      "Windows MSVC debug build only",
+      "Real CT and mesh translated to a local ROI",
+      "Local and global coordinate sampling have different f32 precision",
+      "Legacy and unified interpolation differ by at most one gray level on this crop",
+      "No claim of exact equality between the different interpolation paths"
+    ]
+  },
+  "edge_tiles": {
+    "sample": "PHerc0800",
+    "crop": "400+400-65x67",
+    "layer": 32,
+    "image_shape": [
+      67,
+      65
+    ],
+    "before_source_commit": "b200035e181af514818c4c756c050a9c0d00c5c5",
+    "fix_commit": "03703203d04752d538b782fe0d553e3883295b43",
+    "cold_chunk_transfers": [
+      {
+        "format": "png",
+        "tile_size": 1024,
+        "before_requests": 29,
+        "after_requests": 2,
+        "before_bytes": 60817408,
+        "after_bytes": 4194304
+      },
+      {
+        "format": "png",
+        "tile_size": 128,
+        "before_requests": 7,
+        "after_requests": 2,
+        "before_bytes": 14680064,
+        "after_bytes": 4194304
+      },
+      {
+        "format": "png",
+        "tile_size": 16,
+        "before_requests": 3,
+        "after_requests": 2,
+        "before_bytes": 6291456,
+        "after_bytes": 4194304
+      },
+      {
+        "format": "tif",
+        "tile_size": 1024,
+        "before_requests": 29,
+        "after_requests": 2,
+        "before_bytes": 60817408,
+        "after_bytes": 4194304
+      }
+    ],
+    "before_runs": [
+      {
+        "tile_size": 1024,
+        "format": "png",
+        "cache": "cold",
+        "run": 0,
+        "elapsed_seconds": 3.9817003999996814,
+        "cpu_seconds": 2.75,
+        "chunk_download_requests": 29,
+        "chunk_download_bytes": 60817408,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 1024,
+        "format": "png",
+        "cache": "warm",
+        "run": 1,
+        "elapsed_seconds": 1.2533049000012397,
+        "cpu_seconds": 0.859375,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 1024,
+        "format": "png",
+        "cache": "warm",
+        "run": 2,
+        "elapsed_seconds": 1.2195355000003474,
+        "cpu_seconds": 0.859375,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 128,
+        "format": "png",
+        "cache": "cold",
+        "run": 0,
+        "elapsed_seconds": 2.182871700002579,
+        "cpu_seconds": 1.3125,
+        "chunk_download_requests": 7,
+        "chunk_download_bytes": 14680064,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 128,
+        "format": "png",
+        "cache": "warm",
+        "run": 1,
+        "elapsed_seconds": 1.089741600000707,
+        "cpu_seconds": 0.765625,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 128,
+        "format": "png",
+        "cache": "warm",
+        "run": 2,
+        "elapsed_seconds": 1.0709860999995726,
+        "cpu_seconds": 0.6875,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 16,
+        "format": "png",
+        "cache": "cold",
+        "run": 0,
+        "elapsed_seconds": 2.716411599998537,
+        "cpu_seconds": 0.953125,
+        "chunk_download_requests": 3,
+        "chunk_download_bytes": 6291456,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 16,
+        "format": "png",
+        "cache": "warm",
+        "run": 1,
+        "elapsed_seconds": 1.0766452999996545,
+        "cpu_seconds": 0.71875,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 16,
+        "format": "png",
+        "cache": "warm",
+        "run": 2,
+        "elapsed_seconds": 1.1161791000013181,
+        "cpu_seconds": 0.765625,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 1024,
+        "format": "tif",
+        "cache": "cold",
+        "run": 0,
+        "elapsed_seconds": 3.2353472000031616,
+        "cpu_seconds": 2.859375,
+        "chunk_download_requests": 29,
+        "chunk_download_bytes": 60817408,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 1024,
+        "format": "tif",
+        "cache": "warm",
+        "run": 1,
+        "elapsed_seconds": 1.3443298999991384,
+        "cpu_seconds": 0.984375,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 1024,
+        "format": "tif",
+        "cache": "warm",
+        "run": 2,
+        "elapsed_seconds": 1.3405282000021543,
+        "cpu_seconds": 1.0,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      }
+    ],
+    "after_runs": [
+      {
+        "tile_size": 1024,
+        "format": "png",
+        "cache": "cold",
+        "run": 0,
+        "elapsed_seconds": 2.7499723000000813,
+        "cpu_seconds": 0.921875,
+        "chunk_download_requests": 2,
+        "chunk_download_bytes": 4194304,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 1024,
+        "format": "png",
+        "cache": "warm",
+        "run": 1,
+        "elapsed_seconds": 1.0972753000023658,
+        "cpu_seconds": 0.78125,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 1024,
+        "format": "png",
+        "cache": "warm",
+        "run": 2,
+        "elapsed_seconds": 1.0644537999978638,
+        "cpu_seconds": 0.71875,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 128,
+        "format": "png",
+        "cache": "cold",
+        "run": 0,
+        "elapsed_seconds": 2.036935899999662,
+        "cpu_seconds": 0.859375,
+        "chunk_download_requests": 2,
+        "chunk_download_bytes": 4194304,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 128,
+        "format": "png",
+        "cache": "warm",
+        "run": 1,
+        "elapsed_seconds": 1.0446364999988873,
+        "cpu_seconds": 0.703125,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 128,
+        "format": "png",
+        "cache": "warm",
+        "run": 2,
+        "elapsed_seconds": 1.027763899997808,
+        "cpu_seconds": 0.71875,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 16,
+        "format": "png",
+        "cache": "cold",
+        "run": 0,
+        "elapsed_seconds": 2.374325000000681,
+        "cpu_seconds": 0.9375,
+        "chunk_download_requests": 2,
+        "chunk_download_bytes": 4194304,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 16,
+        "format": "png",
+        "cache": "warm",
+        "run": 1,
+        "elapsed_seconds": 1.0250506999982463,
+        "cpu_seconds": 0.703125,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 16,
+        "format": "png",
+        "cache": "warm",
+        "run": 2,
+        "elapsed_seconds": 1.0162335999993957,
+        "cpu_seconds": 0.734375,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 1024,
+        "format": "tif",
+        "cache": "cold",
+        "run": 0,
+        "elapsed_seconds": 2.025770600001124,
+        "cpu_seconds": 0.890625,
+        "chunk_download_requests": 2,
+        "chunk_download_bytes": 4194304,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 1024,
+        "format": "tif",
+        "cache": "warm",
+        "run": 1,
+        "elapsed_seconds": 1.05945729999803,
+        "cpu_seconds": 0.71875,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      },
+      {
+        "tile_size": 1024,
+        "format": "tif",
+        "cache": "warm",
+        "run": 2,
+        "elapsed_seconds": 1.0467178999970201,
+        "cpu_seconds": 0.71875,
+        "chunk_download_requests": 0,
+        "chunk_download_bytes": 0,
+        "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+      }
+    ],
+    "obj_cases_unchanged": [
+      {
+        "shape": [
+          67,
+          65
+        ],
+        "tile_size": 1024,
+        "pixel_sha256": "0a4cdf645db1190ec55cd8a55f64c481dc4423c39b64893409ab673b3582b064"
+      },
+      {
+        "shape": [
+          67,
+          65
+        ],
+        "tile_size": 16,
+        "pixel_sha256": "0a4cdf645db1190ec55cd8a55f64c481dc4423c39b64893409ab673b3582b064"
+      },
+      {
+        "shape": [
+          63,
+          61
+        ],
+        "tile_size": 1024,
+        "pixel_sha256": "23591cc9f27ba94ae08c44637ce6f0e9e0df221b6907f24cf5910d763561fb70"
+      },
+      {
+        "shape": [
+          63,
+          61
+        ],
+        "tile_size": 16,
+        "pixel_sha256": "23591cc9f27ba94ae08c44637ce6f0e9e0df221b6907f24cf5910d763561fb70"
+      },
+      {
+        "shape": [
+          1,
+          1
+        ],
+        "tile_size": 1024,
+        "pixel_sha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      },
+      {
+        "shape": [
+          1,
+          1
+        ],
+        "tile_size": 16,
+        "pixel_sha256": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71"
+      }
+    ],
+    "obj_source_sha256": "74c390b60c01f5d368bbdb68072038b3895f992649aed7592bf78042dd0734e8",
+    "tiff_padding_nonzero_pixels": {
+      "before": 188845,
+      "after": 0
+    },
+    "before_binary_sha256": "5815fa47c8eb63f760c50a485836485f56575498954cfe3d1c6f008908e434f3",
+    "after_binary_sha256": "18386f7373deacb9c83e15138d96234b730f3e3ada9a9dd60ec95f541d84039e",
+    "limitations": [
+      "One real surface and crop; download savings depend on geometry and crop",
+      "Request counts and bytes cover CT chunk responses, excluding metadata and protocol overhead",
+      "Windows MSVC debug builds with the separate reader/build/cache fixes",
+      "CPU and elapsed times are observations, not a general rendering-throughput claim",
+      "Overlay chunk footprints tested; overlay image equality not executed"
+    ]
+  },
+  "source_reproduction": {
+    "base_commit": "bf08725f038399ff7ecba3bcfa85dd64b749875e",
+    "combined_commit": "9bfc896e7eda42ff643d884dfdd648ef04233af6",
+    "combined_tree": "519920b25df2796081514152e7495b6ccb3f3c19",
+    "patch_file": "combined-validation.patch",
+    "patch_sha256": "5a5743a572220e1f1324e1120c7f9b0bad6e42a36c9cdd0ec106c406c131f64a",
+    "reconstructed_tree_matches": true,
+    "components": {
+      "fix/windows-c3d-build": "f1a0b2e9a3563a0dae31ba5bd3be42204a5e0f17",
+      "fix/zarr-sampling-bounds": "11afb427a31232e05e2394cd99c97ba8dd3367ad",
+      "fix/zarr-fortran-order": "fa69efb37937b03adaf47fae383a223af07b9188",
+      "fix/blosc-memcpy-chunks": "de8b0ffe1a8213365c7138da047425b28cc91997",
+      "fix/blosc-raw-blocks": "1e10dc88b87f89c9ba708d48af4134edc5c58ffa",
+      "fix/blosc-bitshuffle": "cf905694d7329d2e4b707577193a1f6a34bb50de",
+      "fix/render-blocking-initialization": "ea573cb5a64e12470cee277b9b2dd07c121213f5",
+      "fix/windows-sparse-cache": "da0135c90b1d044645b695787a2668bd95012c33",
+      "fix/windows-readonly-cache-map": "56fa32333482d74875a719085885aee27df499b7",
+      "fix/blosc-blocksize-metadata": "75fa9edf8e517662b4a0c4018f5928211d45ee98",
+      "fix/ome-missing-levels": "ec3cb457b69d9600fb9c9bef4672ee3edd487700",
+      "fix/blocking-chunk-download-deadlock": "44bd1b4cbfc98111df5ab3d8ba84cb83f79a3b7f",
+      "perf/clip-render-edge-tiles": "03703203d04752d538b782fe0d553e3883295b43",
+      "fix/local-volume-path-name": "3acf5122342d28633bac8d101646616d93720823",
+      "fix/collect-origin-chunk": "0931ece8ec450c88e1232768693bd676224bb334",
+      "fix/render-crop-validation": "147d9c669da6b5406e057bc65e993f9a813885c8",
+      "fix/cache-zarr-fortran-order": "1e67250e4da0b68ab586cc3bb044d82f9e5bfe75",
+      "fix/downloader-range-response": "1a7b9eaac617eee41540aefab22265df158d6e5d",
+      "fix/flush-tiled-tiff": "a37062c3db39a40814fe3aee09eca0c9960c8aa3",
+      "fix/cache-chunk-dependencies": "a65b511e86de44f78dc2cad2bdf302d25868e140",
+      "fix/gui-blocking-runtime": "55bd90d4cb217debea1c0d2659f7ea59608bf4b1",
+      "fix/gui-cache-directory": "3810c419de4c9977c3713af269c58a1f6b7dfd8d",
+      "fix/cache-zoom-beyond-pyramid": "de2685f5976454b60769e9873e93e36276fa29a2",
+      "fix/cache-invalid-samples": "b4a5e5a8a06b659214ac74eb66590e6a46761ada",
+      "feat/gui-initial-xyz": "a0bb0436013b73cfbb2aca87a90040dc6246fd1f",
+      "fix/cache-empty-previews": "e47aa3ecf2a706e7cf4fc47640b2f814dc9024e1",
+      "fix/render-zero-options": "2df3791db912ae7228a96a0ba4271a62f828ba55",
+      "fix/relative-volume-cache-key": "2be6ebde10172a61769149914e51c1968a82e19a"
+    },
+    "scope": "Exact combined production and regression-test source used by the reported Windows validation; individual fixes remain separate PRs",
+    "cache_runner_validation": {
+      "script": "verify-cache.py",
+      "script_sha256": "67a1418a30e483a3bb607311dea85a538cceb7b21eb401c397590f01d9182fcb",
+      "passed": 91,
+      "ignored": 3,
+      "fresh_temporary_session_removed": true,
+      "exit_code": 0
+    }
+  },
+  "gnu_test_validation": {
+    "source_commit": "9bfc896e7eda42ff643d884dfdd648ef04233af6",
+    "platform": "Windows GNU, GCC 16.1.0",
+    "target": "x86_64-pc-windows-gnu",
+    "passed": 150,
+    "ignored": 3,
+    "all_exit_codes_zero": true,
+    "limitations": [
+      "GUI argument tests were not built for GNU",
+      "External author-specific Zarr dataset was not available",
+      "Four tifxyz tests are excluded here; they have a separate real-fixture run",
+      "Linux and macOS were not run"
+    ]
+  },
+  "additional_overlay_validation": {
+    "source_commit": "9bfc896e7eda42ff643d884dfdd648ef04233af6",
+    "platform": "Windows MSVC",
+    "existing_overlay_tests_passed": 11,
+    "exit_code": 0,
+    "scope": "Existing tests of alpha composition and overlay ray walks; additional to the main 142 checks"
+  },
+  "surface_fixture_validation": {
+    "source_commit": "9bfc896e7eda42ff643d884dfdd648ef04233af6",
+    "fixture": "20241113070770",
+    "fixture_source": "https://github.com/ScrollPrize/villa/tree/f6376d715f9568dd8d976c8cfb57fe7619387302/volume-cartographer/core/test/data/segments/20241113070770",
+    "fixture_sha256": {
+      "meta.json": "b08fde10445ab8219477a1d3b8ac58c523432eb395acd10e379a7311d20c8bf6",
+      "x.tif": "83c07680570bc9102f7abcd96bd144983c69cfc4087a195501344d6b91658dfd",
+      "y.tif": "5ba1613046a9482e85cc416dc6a84258a0df4289148e29aa4f6c39a250d2dd09",
+      "z.tif": "51144dcf78f36adf08a622066b4b75b1e4251acfc6e1a944ddef9f48ba702bd7"
+    },
+    "temporary_test_path_override": true,
+    "production_code_changed": false,
+    "working_tree_restored": true,
+    "results": [
+      {
+        "target": "x86_64-pc-windows-msvc",
+        "exit_code": 0,
+        "passed": 4,
+        "runtime_skips": 0
+      },
+      {
+        "target": "x86_64-pc-windows-gnu",
+        "exit_code": 0,
+        "passed": 4,
+        "runtime_skips": 0
+      }
+    ],
+    "limitations": [
+      "Fixture needs the sibling villa checkout",
+      "The test file path was overridden locally for these runs",
+      "Linux and macOS were not run"
+    ]
+  },
+  "model_path_tests_passed": 3,
+  "model_cache_directory_tests_passed": 1,
+  "gui_argument_tests_passed": 3,
+  "model_relative_cache_tests_passed": 1,
+  "active_tests_passed": 142,
+  "ignored_tests": 3,
+  "combined_validation_commit": "9bfc896e7eda42ff643d884dfdd648ef04233af6"
+}

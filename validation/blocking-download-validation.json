@@ -1,0 +1,43 @@
+{
+  "sample": "PHerc0800",
+  "transport": "local HTTP server with real CT payload",
+  "ct_bytes": 3072,
+  "ct_sha256": "3d3978530ba2569cf61e584fd6105b74b2ada3338ae66a0898374549392b9a81",
+  "concurrent_readers": 2,
+  "responses_tested": [
+    200,
+    404,
+    403,
+    429,
+    500,
+    503
+  ],
+  "concurrent_successful_byte_comparisons": 6144,
+  "retry_successful_voxel_comparisons": 12288,
+  "warm_cache_checked": true,
+  "missing_marker_checked": true,
+  "same_context_retry_checked": true,
+  "before": {
+    "concurrency": "child process killed by the test after the ten-second deadline",
+    "status_errors": "403 returned as missing data instead of a reported error"
+  },
+  "after": {
+    "passed": 2,
+    "failed": 0,
+    "additional_repetitions_passed": 5
+  },
+  "platform": "Windows MSVC",
+  "limitations": [
+    "Linux and macOS not run",
+    "Unexpected statuses panic under the existing blocking reader API; caller can retry after handling the error",
+    "Existing .missing markers are not migrated",
+    "No rendering-throughput claim"
+  ],
+  "tested_commit": "44bd1b4cbfc98111df5ab3d8ba84cb83f79a3b7f",
+  "baseline_commit": "bf08725f038399ff7ecba3bcfa85dd64b749875e",
+  "baseline_test_result": {
+    "passed": 0,
+    "failed": 2
+  },
+  "build_adaptation": "Separate Windows codec build fix"
+}

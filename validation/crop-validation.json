@@ -1,0 +1,45 @@
+{
+  "branch": "fix/render-crop-validation",
+  "regression_tests": {
+    "before_passed": 1,
+    "before_failed": 4,
+    "after_passed": 5
+  },
+  "independent_renderer_tests_passed": 12,
+  "cli": [
+    {
+      "phase": "before",
+      "case": "prefix",
+      "exit_code": 0,
+      "panicked": false,
+      "output_written": true,
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a"
+    },
+    {
+      "phase": "before",
+      "case": "overflow",
+      "exit_code": 101,
+      "panicked": true,
+      "output_written": false
+    },
+    {
+      "phase": "after",
+      "case": "prefix",
+      "exit_code": 2,
+      "panicked": false,
+      "output_written": false
+    },
+    {
+      "phase": "after",
+      "case": "overflow",
+      "exit_code": 2,
+      "panicked": false,
+      "output_written": false
+    }
+  ],
+  "platform": "Windows MSVC",
+  "limitations": [
+    "Linux and macOS not run",
+    "Surface bounds validation unchanged"
+  ]
+}

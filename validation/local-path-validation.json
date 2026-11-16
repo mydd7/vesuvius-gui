@@ -1,0 +1,21 @@
+{
+  "branch": "fix/local-volume-path-name",
+  "regression_tests": {
+    "before_passed": 0,
+    "before_failed": 3,
+    "after_passed": 3
+  },
+  "platform": "Windows MSVC",
+  "real_local_cli_before": {
+    "exit_code": 101,
+    "os_error": 123
+  },
+  "real_local_cli_after": {
+    "exit_code": 0
+  },
+  "limitations": [
+    "Existing saved volume IDs are not migrated",
+    "Path canonicalization is unchanged",
+    "Linux and macOS not executed"
+  ]
+}

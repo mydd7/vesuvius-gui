@@ -1,0 +1,33 @@
+{
+  "branch": "fix/flush-tiled-tiff",
+  "fixture": {
+    "volume_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr",
+    "surface": "20251029010146-auto_grown_20251029010146642",
+    "crop": "242+802-16x16",
+    "layer": 32,
+    "dimensions": [
+      16,
+      16
+    ],
+    "sha256": "1dbda56b0713f3c411c375f694e45e988c67b52da076256e764d4949e509dc68",
+    "processing": "Grayscale bytes from the actual global-coordinate CT surface render, without intensity changes",
+    "surface_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/20251029010146-on-20250521135224-8.64um.tifxyz/",
+    "middle_layer": 32
+  },
+  "failure_injection": "Writer rejects the final 4-byte or 8-byte zero next-IFD link when BufWriter flushes it",
+  "regression_tests": {
+    "before_passed": 1,
+    "before_failed": 2,
+    "after_passed": 3
+  },
+  "independent_renderer_tests_passed": 10,
+  "before": "TIFF and BigTIFF encoding return success despite the final buffered write failing during Drop",
+  "after": "Final buffered write failures are returned to the caller",
+  "pixel_roundtrip": "All 256 real CT pixel bytes match for standard TIFF and BigTIFF",
+  "platform": "Windows MSVC",
+  "limitations": [
+    "Failure injected through Write/Seek; no filesystem filled deliberately",
+    "Linux and macOS not run",
+    "Explicit flush reports buffered I/O errors; it does not request fsync or power-loss durability"
+  ]
+}

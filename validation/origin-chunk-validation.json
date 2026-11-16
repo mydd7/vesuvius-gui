@@ -1,0 +1,136 @@
+{
+  "source": {
+    "volume": "PHerc0800/20250521135224-8.640um-1.2m-116keV-masked.zarr",
+    "native_chunk": "91/47/25",
+    "native_chunk_sha256": "6784a75ce2a9df9b28831a755e1c0524a252b1b93dabae5af4d0bb9d578f563f",
+    "roi_origin_xyz": [
+      3264,
+      6031,
+      11712
+    ],
+    "roi_shape_zyx": [
+      64,
+      64,
+      64
+    ],
+    "roi_sha256": "2949bae623b925e0977397bc58ef0148bfc0a2d2b1cc5b11ecc4e458955b824b",
+    "surface": "20251029010146-auto_grown_20251029010146642",
+    "crop": "242+802-16x16",
+    "mesh_cell_rc": [
+      40,
+      12
+    ],
+    "local_mesh_cell_bounds_xyz": [
+      [
+        38.596435546875,
+        22.84423828125,
+        25.33203125
+      ],
+      [
+        45.889892578125,
+        42.52197265625,
+        45.7861328125
+      ]
+    ],
+    "transform": "Subtract the integer ROI origin from both the volume frame and mesh; CT bytes and relative geometry unchanged",
+    "volume_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr"
+  },
+  "collector_regressions": {
+    "before_passed": 1,
+    "before_failed": 2,
+    "after_passed": 3
+  },
+  "before": [
+    {
+      "case": "global-reference",
+      "shape": [
+        16,
+        16
+      ],
+      "nonzero_pixels": 256,
+      "pixel_sha256": "1dbda56b0713f3c411c375f694e45e988c67b52da076256e764d4949e509dc68"
+    },
+    {
+      "case": "local-0",
+      "shape": [
+        16,
+        16
+      ],
+      "nonzero_pixels": 0,
+      "pixel_sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1"
+    },
+    {
+      "case": "local-1",
+      "shape": [
+        16,
+        16
+      ],
+      "nonzero_pixels": 0,
+      "pixel_sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1"
+    },
+    {
+      "case": "local-2",
+      "shape": [
+        16,
+        16
+      ],
+      "nonzero_pixels": 0,
+      "pixel_sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1"
+    }
+  ],
+  "after": [
+    {
+      "case": "global-reference",
+      "shape": [
+        16,
+        16
+      ],
+      "nonzero_pixels": 256,
+      "pixel_sha256": "1dbda56b0713f3c411c375f694e45e988c67b52da076256e764d4949e509dc68"
+    },
+    {
+      "case": "local-0",
+      "shape": [
+        16,
+        16
+      ],
+      "nonzero_pixels": 256,
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+    },
+    {
+      "case": "local-1",
+      "shape": [
+        16,
+        16
+      ],
+      "nonzero_pixels": 256,
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+    },
+    {
+      "case": "local-2",
+      "shape": [
+        16,
+        16
+      ],
+      "nonzero_pixels": 256,
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+    }
+  ],
+  "independent_legacy_reader": {
+    "nonzero_pixels": 256,
+    "pixel_sha256": "9fb76971061fc0a524d7232cc7aa083f37ec124acbb43e9626385ed5ce030534",
+    "different_pixels": 6,
+    "max_absolute_difference": 1
+  },
+  "global_coordinate_reference": {
+    "different_pixels": 2,
+    "max_absolute_difference": 1
+  },
+  "limitations": [
+    "Windows MSVC debug build only",
+    "Real CT and mesh translated to a local ROI",
+    "Local and global coordinate sampling have different f32 precision",
+    "Legacy and unified interpolation differ by at most one gray level on this crop",
+    "No claim of exact equality between the different interpolation paths"
+  ]
+}

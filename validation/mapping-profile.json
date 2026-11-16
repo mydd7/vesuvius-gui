@@ -1,0 +1,48 @@
+[
+  {
+    "view_length": 549755813888,
+    "private_before": 10653696,
+    "private_after": 1086529536
+  },
+  {
+    "view_length": 1048576,
+    "private_before": 10686464,
+    "private_after": 10690560
+  },
+  {
+    "attempt": 1,
+    "mode": "writable_then_readonly",
+    "elapsed_seconds": 1.4217438999985461,
+    "private_bytes": 1086529536
+  },
+  {
+    "attempt": 1,
+    "mode": "readonly",
+    "elapsed_seconds": 0.004671099999541184,
+    "private_bytes": 1086529536
+  },
+  {
+    "attempt": 2,
+    "mode": "writable_then_readonly",
+    "elapsed_seconds": 1.9213330000020505,
+    "private_bytes": 1086529536
+  },
+  {
+    "attempt": 2,
+    "mode": "readonly",
+    "elapsed_seconds": 0.005312699999194592,
+    "private_bytes": 1086529536
+  },
+  {
+    "attempt": 3,
+    "mode": "writable_then_readonly",
+    "elapsed_seconds": 1.8511037999996915,
+    "private_bytes": 1086529536
+  },
+  {
+    "attempt": 3,
+    "mode": "readonly",
+    "elapsed_seconds": 0.0048123000015039,
+    "private_bytes": 1086529536
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "branch": "fix/render-zero-options",
+  "before": [
+    {
+      "option": "--tile-size",
+      "value": "0",
+      "exit_code": 101,
+      "panicked": true
+    },
+    {
+      "option": "--worker-threads",
+      "value": "0",
+      "exit_code": 101,
+      "panicked": true
+    }
+  ],
+  "after": {
+    "invalid_arguments": [
+      {
+        "option": "--tile-size",
+        "value": "0",
+        "exit_code": 2,
+        "panicked": false,
+        "created_output_directory": false
+      },
+      {
+        "option": "--worker-threads",
+        "value": "0",
+        "exit_code": 2,
+        "panicked": false,
+        "created_output_directory": false
+      }
+    ],
+    "valid_ct_control": {
+      "shape": [
+        16,
+        16
+      ],
+      "nonzero_pixels": 256,
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+      "exit_code": 0
+    }
+  },
+  "regression_tests": {
+    "before_passed": 1,
+    "before_failed": 2,
+    "after_passed": 3
+  },
+  "combined_validation_commit": "03d6a35273dd56b82a778b1038eca440fc78a686",
+  "combined_active_tests": 137,
+  "combined_ignored_tests": 3,
+  "platform": "Windows MSVC",
+  "limitations": [
+    "Linux and macOS were not run"
+  ]
+}

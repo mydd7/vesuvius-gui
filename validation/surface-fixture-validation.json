@@ -1,0 +1,33 @@
+{
+  "source_commit": "9bfc896e7eda42ff643d884dfdd648ef04233af6",
+  "fixture": "20241113070770",
+  "fixture_source": "https://github.com/ScrollPrize/villa/tree/f6376d715f9568dd8d976c8cfb57fe7619387302/volume-cartographer/core/test/data/segments/20241113070770",
+  "fixture_sha256": {
+    "meta.json": "b08fde10445ab8219477a1d3b8ac58c523432eb395acd10e379a7311d20c8bf6",
+    "x.tif": "83c07680570bc9102f7abcd96bd144983c69cfc4087a195501344d6b91658dfd",
+    "y.tif": "5ba1613046a9482e85cc416dc6a84258a0df4289148e29aa4f6c39a250d2dd09",
+    "z.tif": "51144dcf78f36adf08a622066b4b75b1e4251acfc6e1a944ddef9f48ba702bd7"
+  },
+  "temporary_test_path_override": true,
+  "production_code_changed": false,
+  "working_tree_restored": true,
+  "results": [
+    {
+      "target": "x86_64-pc-windows-msvc",
+      "exit_code": 0,
+      "passed": 4,
+      "runtime_skips": 0
+    },
+    {
+      "target": "x86_64-pc-windows-gnu",
+      "exit_code": 0,
+      "passed": 4,
+      "runtime_skips": 0
+    }
+  ],
+  "limitations": [
+    "Fixture needs the sibling villa checkout",
+    "The test file path was overridden locally for these runs",
+    "Linux and macOS were not run"
+  ]
+}

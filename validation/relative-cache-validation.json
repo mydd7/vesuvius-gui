@@ -1,0 +1,91 @@
+{
+  "branch": "fix/relative-volume-cache-key",
+  "source": {
+    "volume_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr",
+    "native_chunk": "91/47/25",
+    "native_chunk_sha256": "6784a75ce2a9df9b28831a755e1c0524a252b1b93dabae5af4d0bb9d578f563f",
+    "A_roi_origin_xyz": [
+      3264,
+      6031,
+      11712
+    ],
+    "B_roi_origin_xyz": [
+      3232,
+      6048,
+      11680
+    ],
+    "roi_shape_zyx": [
+      64,
+      64,
+      64
+    ],
+    "processing": "Unchanged contiguous samples from the same native CT chunk"
+  },
+  "regression_test": {
+    "before_passed": 0,
+    "before_failed": 1,
+    "after_passed": 1,
+    "A_sample_value": 137,
+    "B_sample_value": 145
+  },
+  "cli_before": [
+    {
+      "case": "A",
+      "nonzero_pixels": 256,
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+    },
+    {
+      "case": "B-shared",
+      "nonzero_pixels": 256,
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+    },
+    {
+      "case": "B-fresh",
+      "nonzero_pixels": 256,
+      "pixel_sha256": "df94a96099eac7ceb44ad792b9003a10616c2b23f6a00ae72057a1b8e53af8d4"
+    }
+  ],
+  "cli_after_reusing_previous_shared_cache": [
+    {
+      "case": "A",
+      "shape": [
+        16,
+        16
+      ],
+      "nonzero_pixels": 256,
+      "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61",
+      "exit_code": 0
+    },
+    {
+      "case": "B-shared",
+      "shape": [
+        16,
+        16
+      ],
+      "nonzero_pixels": 256,
+      "pixel_sha256": "df94a96099eac7ceb44ad792b9003a10616c2b23f6a00ae72057a1b8e53af8d4",
+      "exit_code": 0
+    },
+    {
+      "case": "B-fresh",
+      "shape": [
+        16,
+        16
+      ],
+      "nonzero_pixels": 256,
+      "pixel_sha256": "df94a96099eac7ceb44ad792b9003a10616c2b23f6a00ae72057a1b8e53af8d4",
+      "exit_code": 0
+    }
+  ],
+  "combined_validation_commit": "9bfc896e7eda42ff643d884dfdd648ef04233af6",
+  "combined_active_tests": 138,
+  "combined_ignored_tests": 3,
+  "platform": "Windows MSVC",
+  "limitations": [
+    "Windows regression run needs the separate C3D build, sparse file and read-only mapping fixes",
+    "Linux and macOS were not run",
+    "Previously cached relative entries are left unused",
+    "Absolute path keys are preserved; symlink aliases are not canonicalized"
+  ],
+  "relative_resolution": "current_dir joined with the relative path; no new path-resolution API version requirement"
+}

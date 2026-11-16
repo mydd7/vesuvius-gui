@@ -1,0 +1,78 @@
+{
+  "sample": "PHerc0800",
+  "surface": "20251029010146-auto_grown_20251029010146642",
+  "volume": "20250521135224-8.640um-1.2m-116keV-masked.zarr",
+  "crop": "400+400-65x67",
+  "layer": 32,
+  "before": {
+    "render_initialization_fixed": true,
+    "sparse_cache_fixed": false,
+    "nonzero_pixels": 0,
+    "exit_code": 0,
+    "disk_write_error": 112
+  },
+  "after": {
+    "render_initialization_fixed": true,
+    "sparse_cache_fixed": true,
+    "nonzero_pixels": 4355,
+    "exit_code": 0
+  },
+  "output_equality": [
+    {
+      "case": "png-single",
+      "shape": [
+        67,
+        65
+      ],
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a",
+      "matches_png_single": true,
+      "elapsed_seconds": 3.0581772000005003
+    },
+    {
+      "case": "png-tiled",
+      "shape": [
+        67,
+        65
+      ],
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a",
+      "matches_png_single": true,
+      "elapsed_seconds": 1.165092299997923
+    },
+    {
+      "case": "tif-single",
+      "shape": [
+        67,
+        65
+      ],
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a",
+      "matches_png_single": true,
+      "elapsed_seconds": 1.0530138000031002
+    },
+    {
+      "case": "tif-tiled",
+      "shape": [
+        67,
+        65
+      ],
+      "pixel_sha256": "673b690e6dccec9a547fe7d996965bca18f3bd53d6b1ad1a522683fd8215f56a",
+      "matches_png_single": true,
+      "elapsed_seconds": 1.057712600006198
+    }
+  ],
+  "reader_codec_tests_passed": 20,
+  "renderer_tests_passed": 20,
+  "local_path_tests_passed": 3,
+  "cache_directory_tests_passed": 1,
+  "gui_argument_tests_passed": 3,
+  "cache_tests": {
+    "passed": 82,
+    "ignored": 3,
+    "mode": "isolated processes",
+    "full_suite_single_process": "exhausts Windows commit as registries retain mapped shards"
+  },
+  "limitations": [
+    "Later changes validated on Windows MSVC; Linux and macOS not run",
+    "No ink-recognition or overall rendering-throughput claim"
+  ],
+  "image_processing": "Original grayscale pixels, nearest-neighbor enlargement, labels, no screenshot or generated image"
+}

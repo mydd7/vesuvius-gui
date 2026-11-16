@@ -1,0 +1,74 @@
+{
+  "branch": "fix/cache-empty-previews",
+  "source": {
+    "volume_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr/",
+    "native_chunk": "91/47/25",
+    "native_chunk_sha256": "6784a75ce2a9df9b28831a755e1c0524a252b1b93dabae5af4d0bb9d578f563f",
+    "roi_origin_xyz": [
+      3264,
+      6031,
+      11712
+    ],
+    "roi_shape_zyx": [
+      64,
+      64,
+      64
+    ],
+    "roi_sha256": "2949bae623b925e0977397bc58ef0148bfc0a2d2b1cc5b11ecc4e458955b824b",
+    "coarse_shape_zyx": [
+      32,
+      32,
+      32
+    ],
+    "coarse_sha256": "f3d5e91ed46c6d1fb6b673c98d116074f265525cc685e919570cf6d9c2f7dc3c",
+    "processing": "Unchanged real CT values at every second voxel, with scale 2 metadata",
+    "fine_chunk": "Intentionally absent to model a sparse or partially downloaded array; fill value is zero"
+  },
+  "regression_tests": {
+    "before_passed": 1,
+    "before_failed": 4,
+    "after_passed": 5
+  },
+  "prepared_cache": {
+    "fine_state": "Empty",
+    "preview_nonzero_voxels": 262144,
+    "nearest_value": 0
+  },
+  "cli_same_persisted_cache": {
+    "before": {
+      "shape": [
+        16,
+        16
+      ],
+      "nonzero_pixels": 256,
+      "pixel_sha256": "2ea3b1d63fc752bf759c396c83fa1d783e25ae33327022d6f9611a90620da695",
+      "exit_code": 0
+    },
+    "after": {
+      "shape": [
+        16,
+        16
+      ],
+      "nonzero_pixels": 0,
+      "pixel_sha256": "5341e6b2646979a70e57653007a1f310169421ec9bdd9f1a5648f75ade005af1",
+      "exit_code": 0
+    }
+  },
+  "valid_ct_control": {
+    "shape": [
+      16,
+      16
+    ],
+    "nonzero_pixels": 256,
+    "pixel_sha256": "9350c9f360e985c866317ae2da5c91754cde9cab7453be4cc65a182952fb1b61"
+  },
+  "combined_validation_commit": "6b53f0865d62760a20af26b01062f6b3375b6993",
+  "combined_active_tests": 134,
+  "combined_ignored_tests": 3,
+  "platform": "Windows MSVC",
+  "limitations": [
+    "Linux and macOS were not run",
+    "Sparse fine data is intentionally absent in this reproduction",
+    "GUI display still requires manual confirmation"
+  ]
+}
